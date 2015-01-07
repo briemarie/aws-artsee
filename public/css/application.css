@@ -1,0 +1,40 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+h1 {
+  font-family: Brush Script MT;
+  font-size: 120px;
+  text-align: center;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+h2 {
+  font-family: Brush Script MT;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 200px;
+  text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+h3 {
+    text-align: center;
+}
+
+.window {
+text-align: center;
+}
+
+form {
+  text-align: center;
+}
