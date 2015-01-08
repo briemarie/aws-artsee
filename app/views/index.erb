@@ -3,9 +3,8 @@
   <br>
   Which artist would you like to wash away today's dust?</h3>
   <form id="get_art" method="post" action="/art_lookup">
-      <label class="label" for="artists_name">Artist's Name</label>
-      <br>
-        <input type="text" name="artist name" placeholder="ie. Picasso">
+      <label class="label" for="name">Artist's Name</label>
+        <input type="text" name="artist[name]" placeholder="ie. Picasso">
         <br>
         <input type="submit" value="Lookup Art">
   </form>
@@ -14,5 +13,3 @@
   <body background="http://images.rapgenius.com/9fc04e7db2f8b183d82d754031c1c1db.948x881x1.jpg"/>
   <h1>Artsee</h1>
   <h2>The app for seeing all of your favorite art</h2>
-
-
