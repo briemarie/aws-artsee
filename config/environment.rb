@@ -21,6 +21,9 @@ require "sinatra/reloader" if development?
 require 'erb'
 
 #For API stuff
+require 'json'
+require 'open-uri'
+require 'nokogiri'
 require 'httparty'
 require 'dotenv'
 Dotenv.load

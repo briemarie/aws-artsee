@@ -1,16 +1,16 @@
-module ArtMuseum
+# module ArtMuseum
 
-  class Client
-    include HTTParty
+#   class Client
+#     include HTTParty
 
-    base_uri "http://www.brooklynmuseum.org/opencollection/api"
+#     base_uri "http://www.brooklynmuseum.org/opencollection/api"
 
-    def art
-      response = self.class.get('/?method=collection.search&version=1&api_key=[ API KEY]&keyword=params')
+#     def image_search
+#       response = self.class.get('/?method=collection.search&version=1&api_key=API_KEY&keyword=Monet')
 
-      return response.body
-    end
+#       response.body
+#     end
 
-  end
+#   end
 
-end
+# end

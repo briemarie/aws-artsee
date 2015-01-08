@@ -18,9 +18,13 @@ gem 'rake'
 
 gem 'shotgun'
 
+#for use with API
+gem 'json'
 gem 'httparty'
 gem 'dotenv'
+gem 'nokogiri'
 
+#test gems (although I haven't tested)
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

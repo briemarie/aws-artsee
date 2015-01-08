@@ -107,6 +107,8 @@ DEPENDENCIES
   faker
   httparty
   jasmine
+  json
+  nokogiri
   pg
   rack-test
   rake
