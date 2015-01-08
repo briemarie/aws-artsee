@@ -16,11 +16,10 @@ get '/:artist' do
   uri = "https://www.brooklynmuseum.org/opencollection/api/?method=collection.search&version=1&format=html&api_key=" + "#{ENV['API_KEY']}" + "&keyword=" + "#{params[:artist]}"
 
 doc = Nokogiri::HTML(open(uri))
-@images = doc.xpath("//li")
+
+@art = doc.xpath("//li")
 
 erb :art
 end
-
-
 
 

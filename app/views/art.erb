@@ -1,2 +1,6 @@
 <h1>There are no mistakes, only happy accidents</h1>
-<%=@images%>
+<ol class="reversed"><%@art.each do |artwork|%>
+  <li><%=artwork%></li>
+    <%end%>
+</ol>
+
