@@ -1,4 +1,4 @@
-#This is the signup page
+#This is the sign-up page
 get '/' do
 
   erb :sign_up
@@ -8,28 +8,40 @@ post '/' do
   new_user = User.new(params[:user])
   new_user.save
 
-  redirect '/users'
+  redirect '/sessions/new'
 end
 
-get '/users' do
+
+#This is the sign-in page (sessions)
+get '/sessions/new' do
 
   erb :sign_in
 end
 
-post '/users' do
-  user = User.find(email: params[:email])
+post '/sessions' do
+  @user = User.find_by(email: params[:email])
 
-  redirect '/users/#{user.id}'
+  if @user.authenticate?(params[:password])
+    session[:user_id] = @user.id
+    redirect '/search'
+  else
+    redirect '/'
+  end
+end
+
+delete '/sessions/:id' do
+  session[:user_id] = nil
+  redirect '/'
 end
 
 
 #This is the profile/search page
-get 'users/:id' do
+get '/search' do
 
   erb :profile
 end
 
-post 'users/:id' do
+post '/search' do
 
   redirect "/#{params[:artist]}"
 end
