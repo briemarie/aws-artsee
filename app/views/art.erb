@@ -1,6 +1,8 @@
-<h1>There are no mistakes, only happy accidents</h1>
-<ol class="reversed"><%@art.each do |artwork|%>
-  <li><%=artwork%></li>
-    <%end%>
-</ol>
+<body class="art_display">
+<h2>Here is all the art that matches your search for <%=params[:artist]%></h2>
+<%@art.each do |artwork|%>
+<%=artwork%>
+<%end%>
+</body>
+
 
