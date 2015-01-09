@@ -1,11 +1,35 @@
-#This is the homepage
+#This is the signup page
 get '/' do
 
-  erb :index
+  erb :sign_up
 end
 
-#This is the post route for the pop-up box that occurs on the homepage
 post '/' do
+  new_user = User.new(params[:user])
+  new_user.save
+
+  redirect '/users'
+end
+
+get '/users' do
+
+  erb :sign_in
+end
+
+post '/users' do
+  user = User.find(email: params[:email])
+
+  redirect '/users/#{user.id}'
+end
+
+
+#This is the profile/search page
+get 'users/:id' do
+
+  erb :profile
+end
+
+post 'users/:id' do
 
   redirect "/#{params[:artist]}"
 end
