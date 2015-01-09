@@ -1,27 +1,42 @@
 #This is the sign-up page
+get '/session-viewer' do
+  session.inspect
+end
+
 get '/' do
+  if session[:user_id]
+    redirect '/search'
+  else
+    redirect '/'
+  end
 
   erb :sign_up
 end
 
 post '/' do
-  new_user = User.new(params[:user])
+  new_user = User.create(email: params[:email], password_hash: params[:password_hash])
+  new_user.password = params[:password_hash]
   new_user.save
-
-  redirect '/sessions/new'
+  session[:user_id] = new_user.id
+  if session[:user_id]
+    redirect '/search'
+  else
+    redirect '/'
+  end
 end
 
 
 #This is the sign-in page (sessions)
 get '/sessions/new' do
+  @user = User.find(session[:user_id])
 
+  session[:user_id] = @user.id
   erb :sign_in
 end
 
 post '/sessions' do
-  @user = User.find_by(email: params[:email])
-
-  if @user.authenticate?(params[:password])
+  @user = User.find(session[:user_id])
+  if @user.authenticate?(params[:password_hash])
     session[:user_id] = @user.id
     redirect '/search'
   else
@@ -53,6 +68,7 @@ get '/:artist' do
 
   doc = Nokogiri::HTML(open(uri))
   @art = doc.xpath("//li")
+  p uri
 
   if @art.empty?
     erb :happy
@@ -60,5 +76,6 @@ get '/:artist' do
      erb :art
   end
 end
+
 
 

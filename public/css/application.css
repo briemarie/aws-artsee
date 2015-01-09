@@ -23,6 +23,8 @@ p {
 img {
   margin-bottom: 20px;
 }
+
+
 .button {
   display: inline-block;
   width: 30%;
@@ -40,13 +42,16 @@ img {
   text-align: center;
   text-decoration: none;
 }
+
 .button:hover {
   background-color: #22a88d;
 }
+
 .button:active {
   background-color: #209e85;
   box-shadow: rgba(0, 0, 0, 0.29) 0px 4px 12px -4px inset;
 }
+
 .subtitle {
   margin-right: 89px;
   margin-bottom: 63px;
@@ -57,6 +62,7 @@ img {
   font-weight: 400;
   text-shadow: none;
 }
+
 .field {
   width: 40%;
   height: 54px;
@@ -72,7 +78,8 @@ img {
   color: #262c46;
   font-size: 16px;
 }
-.sign-up-form, .sign-in-form {
+
+.sign-up-form, .sign-in-form, .search-form {
   margin-bottom: 66px;
 }
 
@@ -93,21 +100,27 @@ img {
   float: left;
   background-color: #1abc9c;
 }
+
 .bar._2 {
   background-color: #f2ca27;
 }
+
 .bar._3 {
   background-color: #e67e22;
 }
+
 .bar._4 {
   background-color: #16a085;
 }
+
 .bar._5 {
   background-color: #2980b9;
 }
+
 .bar._6 {
   background-color: #e74c3c;
 }
+
 .container {
   padding-right: 70px;
   padding-left: 70px;

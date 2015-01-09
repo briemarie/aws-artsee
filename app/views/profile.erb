@@ -13,16 +13,18 @@
         <div class="w-container container">
             <p class="subtitle">The purpose of art is washing the dust of daily life off our souls...<br>
                 Chose an artist to wash today's dust off </p>
-            <form id="get_art" method="post" action="'/search">
-                <label class="label" for="name">Artist's Name</label>
-                <input type="text" name="artist" placeholder="ie. Picasso">
-                <br>
-                <input type="submit" value="See Art">
-            </form>
+            <div class="w-form search-form">
+                <form class="w-clearfix" name="wf-form-search-form" method="post" action="/search">
+                    <input class="w-input field"type="text" name="artist" placeholder="Artist name">
+                    <br>
+                    <input class="w-button button" type="submit" value="See Art">
+                </form>
+            </div>
         </div>
         <div>
             <img src="http://images.rapgenius.com/9fc04e7db2f8b183d82d754031c1c1db.948x881x1.jpg" width="643" height="576" alt="happy clouds">
         </div>
     </div>
 </body>
+
 
