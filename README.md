@@ -4,4 +4,6 @@ It's not as spectacular as I had anticipated, but considering it was built in th
 
 So, take a look around, click the button, find an artist you like, and see some beautiful art.
 
-https://artsee.herokuapp.com/ (heroku no longer runs my app as the api runs on http, heroku only accepts https)
+https://artsee.herokuapp.com/ (Heroku and the art API are now having issues getting along).
+
+http://artsee-env-vmgmsvazz3.elasticbeanstalk.com/ (I deployed to AWS since Heroku wasn't playing nice, and am currently fixing a redirect loopng issue that AWS is having with my app).
