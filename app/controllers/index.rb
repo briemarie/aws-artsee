@@ -6,8 +6,6 @@ end
 get '/' do
   if session[:user_id]
     redirect '/search'
-  else
-    redirect '/'
   end
 
   erb :sign_up
